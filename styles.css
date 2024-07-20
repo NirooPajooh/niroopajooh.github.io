@@ -219,6 +219,13 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.map iframe {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    border: none;
+}
+
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -307,6 +314,10 @@ footer {
     .testimonials {
         padding: 2rem 1rem;
     }
+
+    .gallery-photos img {
+        width: calc(50% - 1rem);
+    }
 }
 
 @media (max-width: 480px) {
@@ -327,11 +338,20 @@ footer {
     }
 
     nav ul li {
-        margin: 0;
+        width: 100%;
     }
 
     nav ul li a {
+        display: block;
+        width: 100%;
         padding: 0.75rem 1.5rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        cursor: pointer;
     }
 
     .hero-content h1 {
@@ -342,15 +362,7 @@ footer {
         font-size: 0.9rem;
     }
 
-    .testimonial-slider {
-        flex-direction: column;
-    }
-
     .gallery-photos img {
         width: calc(50% - 1rem);
-    }
-
-    .hamburger {
-        display: flex;
     }
 }
