@@ -366,3 +366,37 @@ footer {
         width: calc(50% - 1rem);
     }
 }
+ol, ul {
+    list-style: none;
+    font-family: 'Vazir', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+ol li, ul li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    color: #333;
+}
+
+ol li:hover, ul li:hover {
+    color: #005bb5;
+    transform: translateX(5px);
+    font-weight: 600;
+}
+
+ol li ul, ul li ul {
+    margin-top: 5px;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+ol li ul li, ul li ul li {
+    color: #555;
+}
