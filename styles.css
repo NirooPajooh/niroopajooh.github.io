@@ -346,12 +346,12 @@ footer {
         width: 100%;
         padding: 0.75rem 1.5rem;
     }
-
+    
     .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-        cursor: pointer;
+        display: flex !important;
+        position: absolute;
+        top: 38px; 
+        left: 35px;
     }
 
     .hero-content h1 {
