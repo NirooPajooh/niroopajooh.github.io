@@ -27,7 +27,7 @@
                 second: "2-digit"
             }).format(now);
 
-            return { time: iranTime.replace("T", " ") };
+            return { time: iranTime.replace(", ", " ") };
         };
 
         const queryParams = new URLSearchParams(window.location.search);
