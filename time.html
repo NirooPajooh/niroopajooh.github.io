@@ -6,35 +6,21 @@
     <title>NirooPajooh Time API</title>
 </head>
 <body>
-    <pre id="response">
-        Add `?format=json` to the URL to get the current Iran time in JSON.
-    </pre>
+    <pre id="response"></pre>
 
     <script>
-        const twoDigits = (num) => String(num).padStart(2, '0');
+        const iranTime = new Intl.DateTimeFormat("en-CA", {
+            timeZone: "Asia/Tehran",
+            hour12: false,
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        }).format(new Date()).replace(", ", " ");
 
-        const getIranTime = () => {
-            const now = new Date();
-
-            const iranTime = new Intl.DateTimeFormat("en-CA", {
-                timeZone: "Asia/Tehran",
-                hour12: false,
-                year: "numeric",
-                month: "2-digit",
-                day: "2-digit",
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit"
-            }).format(now);
-
-            return { time: iranTime.replace(", ", " ") };
-        };
-
-        const queryParams = new URLSearchParams(window.location.search);
-        if (queryParams.get("format") === "json") {
-            const response = getIranTime();
-            document.getElementById('response').textContent = JSON.stringify(response, null, 2);
-        }
+        document.getElementById('response').textContent = JSON.stringify({ time: iranTime }, null, 2);
     </script>
 </body>
 </html>
