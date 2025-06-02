@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Counter</title>
+    <title>بازدید بصری</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,41 +35,41 @@
     </style>
 </head>
 <body>
-    <h1>Class Counter</h1>
+    <h1>بازدید بصری</h1>
 
-    <div id="time-display">Current Iran Time: <span id="system-time"></span></div>
+    <div id="time-display">زمان: <span id="system-time"></span></div>
 
     <div class="counter" id="counterA">
-        <strong>Class A: </strong>
+        <strong>سواری و وانت</strong>
         <button onclick="updateCount('A', -1)">-</button>
         <span id="countA">0</span>
         <button onclick="updateCount('A', 1)">+</button>
     </div>
     <div class="counter" id="counterB">
-        <strong>Class B: </strong>
+        <strong>کامیونت و مینی بوس ۲ محور</strong>
         <button onclick="updateCount('B', -1)">-</button>
         <span id="countB">0</span>
         <button onclick="updateCount('B', 1)">+</button>
     </div>
     <div class="counter" id="counterC">
-        <strong>Class C: </strong>
+        <strong>کامیون ۳ محور</strong>
         <button onclick="updateCount('C', -1)">-</button>
         <span id="countC">0</span>
         <button onclick="updateCount('C', 1)">+</button>
     </div>
     <div class="counter" id="counterD">
-        <strong>Class D: </strong>
+        <strong>اتوبوس</strong>
         <button onclick="updateCount('D', -1)">-</button>
         <span id="countD">0</span>
         <button onclick="updateCount('D', 1)">+</button>
     </div>
     <div class="counter" id="counterE">
-        <strong>Class E: </strong>
+        <strong>تریلر</strong>
         <button onclick="updateCount('E', -1)">-</button>
         <span id="countE">0</span>
         <button onclick="updateCount('E', 1)">+</button>
     </div>
-    <button id="reset-btn" onclick="resetCounts()">Reset All</button>
+    <button id="reset-btn" onclick="resetCounts()">ریست</button>
 
     <script>
         function updateCount(classId, delta) {
