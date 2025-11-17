@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>صفحه مورد نظر یافت نشد | نیروپژوه آپادانا</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta name="description" content="صفحه‌ای که به دنبال آن هستید پیدا نشد. لطفاً به صفحه اصلی بازگردید یا از منوی سایت استفاده کنید." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "404 Not Found",
+  "description": "صفحه مورد نظر یافت نشد",
+  "isPartOf": {
+    "@type": "Organization",
+    "name": "شرکت فنی مهندسی نیروپژوه آپادانا",
+    "url": "https://niroopajooh.ir"
+  }
+}
+</script>
+
+  <!-- Tailwind CSS -->
+  <script src="assets/js/tailwind.min.js"></script>
+  <!-- Font -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- AOS -->
+  <link href="assets/css/aos.css" rel="stylesheet">
+  <script src="assets/js/aos.js"></script>
+
+  <style>
+    body {
+      font-family: Vazirmatn, sans-serif;
+    }
+    .glow {
+      text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border-b">
+  <nav class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2 font-bold text-lg">
+      <span class="inline-block w-3 h-3 bg-sky-600 rounded-full"></span>
+      نیروپژوه آپادانا
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      <li><a href="/shop" class="hover:text-sky-600">فروشگاه</a></li>
+      <li><a href="/" class="hover:text-sky-600">صفحه اصلی</a></li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn"
+      class="md:hidden p-2 rounded-lg bg-white/50 backdrop-blur border border-slate-200 hover:bg-slate-100 transition">
+      <svg id="menu-icon" class="w-7 h-7 transition-transform duration-300" fill="none" stroke="currentColor"
+        stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+    class="hidden flex-col bg-white/80 backdrop-blur-lg border-b shadow-lg md:hidden 
+    text-sm font-medium overflow-hidden transition-all duration-300">
+    
+    <a href="/shop" class="py-4 px-6 hover:bg-slate-100 transition block">فروشگاه</a>
+    <a href="/" class="py-4 px-6 hover:bg-slate-100 transition block">صفحه اصلی</a>
+  </div>
+</header>
+
+<!-- 404 Section -->
+<section class="py-32 bg-gradient-to-b from-sky-50 to-white">
+  <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+
+    <h1 class="text-9xl font-extrabold text-sky-600 glow">404</h1>
+    <h2 class="mt-6 text-3xl font-bold">صفحه مورد نظر یافت نشد</h2>
+
+    <p class="mt-4 text-slate-600 leading-8">
+      متأسفانه صفحه‌ای که به دنبال آن هستید وجود ندارد یا ممکن است حذف شده باشد.<br>
+      می‌توانید از دکمه‌های زیر برای ادامه استفاده کنید.
+    </p>
+
+    <div class="mt-10 flex justify-center gap-4">
+      <a href="/" class="px-6 py-3 rounded-xl bg-sky-600 text-white shadow hover:bg-sky-700">بازگشت به صفحه اصلی</a>
+      <a href="#contact" class="px-6 py-3 rounded-xl border hover:bg-slate-50">تماس با پشتیبانی</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact footer -->
+<footer id="contact" class="bg-slate-800 text-slate-200 py-14">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <img src="np.png" class="mx-auto w-20 h-auto mb-4" alt="Niroopajooh">
+    <p class="font-bold text-lg">شرکت فنی مهندسی نیروپژوه آپادانا</p>
+    <p class="text-sm mt-2 text-slate-400">پشتیبانی و ارتباط با ما:  
+      <span class="text-sky-400">info@niroopajooh.ir</span>
+    </p>
+    <div class="mt-4 text-sm text-slate-400">© ۱۳۸۵–۱۴۰۴ تمامی حقوق محفوظ است.</div>
+  </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menuIcon = document.getElementById("menu-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    let menuOpen = false;
+
+    menuBtn.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+
+      // Slide animation
+      mobileMenu.classList.toggle("hidden");
+
+      // Animate icon (hamburger → X)
+      if (menuOpen) {
+        menuIcon.setAttribute("viewBox", "0 0 24 24");
+        menuIcon.innerHTML =
+          '<path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6l-12 12" />';
+      } else {
+        menuIcon.innerHTML =
+          '<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />';
+      }
+    });
+    document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuOpen = false;
+
+      menuIcon.innerHTML =
+        '<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />';
+      });
+    });
+  AOS.init({
+    duration: 900,
+    delay: 50,
+    easing: 'ease-out-quart',
+    once: true
+  });
+</script>
+
+</body>
+</html>
