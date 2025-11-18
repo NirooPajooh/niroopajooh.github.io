@@ -184,7 +184,10 @@
     @keyframes blink {
       50% { opacity: 0; }
     }
-
+    #typing-text.no-cursor::after {
+      content: none; 
+      animation: none;
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -606,7 +609,9 @@
         typingElement.innerHTML += fullText.charAt(index);
         index++;
         setTimeout(type, 40);
-      }
+      } else {
+        typingElement.classList.add("no-cursor");
+     }
     }
 
     type();
