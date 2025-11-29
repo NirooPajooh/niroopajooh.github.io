@@ -249,7 +249,6 @@
           نیروپژوه آپادانا مجموعه‌ای مهندسی با بیش از دو دهه تجربه در طراحی، اجرا و پشتیبانی از پروژه‌های ملی در حوزه‌های
           فناوری اطلاعات، سیستم‌های هوشمند حمل‌ونقل، انرژی خورشیدی، ارتباطات بی‌سیم و هوش مصنوعی است.
         </p>
-        <!-- <p id="typing-text" class="text-slate-600 leading-8"></p> -->
         <div class="mt-8 flex gap-4">
           <a href="#contact" class="px-6 py-3 rounded-xl bg-sky-600 text-white shadow hover:bg-sky-700">شروع همکاری</a>
           <a href="#about" class="px-6 py-3 rounded-xl border hover:bg-slate-50">آشنایی بیشتر</a>
@@ -598,22 +597,37 @@
       easing: 'ease-out-quart',
       once: true
     });
-    const typingElement = document.getElementById("typing-text");
-    const fullText = typingElement.innerHTML;
-    typingElement.innerHTML = '';
-    let index = 0;
+  const typingElement = document.getElementById("typing-text");
+  const fullText = typingElement.innerHTML.trim();
+  typingElement.innerHTML = '';
+  let index = 0;
+  let hasTyped = false;
 
-    function type() {
-      if (index < fullText.length) {
-        typingElement.innerHTML += fullText.charAt(index);
-        index++;
-        setTimeout(type, 40);
-      } else {
-        typingElement.classList.add("no-cursor");
-     }
+  function type() {
+    if (index < fullText.length) {
+      typingElement.innerHTML += fullText.charAt(index);
+      index++;
+      setTimeout(type, 45);
+    } else {
+      typingElement.classList.add("no-cursor");
     }
+  }
 
-    type();
+  // Observe the entire about section
+  const aboutSection = document.getElementById("about");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasTyped) {
+        hasTyped = true;
+        type();
+        observer.unobserve(aboutSection);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(aboutSection);
+
   const lenis = new Lenis({
     duration: 1.2,
     smooth: true,
